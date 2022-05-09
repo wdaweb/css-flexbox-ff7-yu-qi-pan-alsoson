@@ -20,6 +20,7 @@
       align-items: center;
       font-family: "標楷體";
     }
+
     /* #bogbox{
       width: 100%;
       height: 100%;
@@ -63,19 +64,56 @@
       justify-content: flex-start;
       align-items: flex-start;
     }
+
     #chessbox .row:last-child {
       border-bottom: none;
     }
+
     #chessbox .col {
       width: 12.5%;
       height: 100%;
       border-right: 1px solid black;
     }
-    #chessbox .row:nth-child(1) .col:nth-child(4)::before {
+
+    #chessbox .row:nth-child(1) .col:nth-child(5)::before {
       content: "";
-      border: 1px solid brown;
-      background-color: brown;
+      background-color: rgb(0, 0, 0);
+      width: 0.9px;
+      height: 107px;
+      transform: skew(47deg);
+      position: absolute;
     }
+
+    #chessbox .row:nth-child(1) .col:nth-child(5)::after {
+      content: "";
+      background-color: black;
+      width: 0.9px;
+      height: 107px;
+      transform: skew(-48deg);
+      position: absolute;
+    }
+
+    #chessbox .row:nth-child(8) .col:nth-child(5)::before {
+      content: "";
+      background-color: rgb(0, 0, 0);
+      width: 0.9px;
+      height: 105px;
+      transform: skew(48deg);
+      position: absolute;
+      transform-origin: left;
+    }
+
+    #chessbox .row:nth-child(8) .col:nth-child(5)::after {
+      content: "";
+      background-color: rgb(0, 0, 0);
+      width: 0.9px;
+      height: 102px;
+      transform: skew(-48deg);
+      position: absolute;
+      transform-origin: left;
+    }
+
+
     #chessbox .river {
       border-right: none;
       text-align: right;
@@ -83,30 +121,32 @@
       line-height: 1.7;
       padding-right: 2px;
     }
+
     #chessbox .textalign-left {
       text-align: left;
       padding-left: 2px;
     }
+
     #chessbox .col:last-child {
       border-right: none;
     }
 
 
     /* 棋子 */
-    #box{
+    #box {
       width: 520px;
       height: 530px;
       position: absolute;
     }
 
-    #box .boxrow{
+    #box .boxrow {
       width: 100%;
       height: 10%;
       display: flex;
       flex-direction: row;
     }
 
-    #box .boxcol{
+    #box .boxcol {
       width: 11.1111%;
       height: 100%;
       /* background-color: ; */
@@ -117,7 +157,7 @@
     }
 
     /* 黑棋 */
-    #box .boxcol .circlechess{
+    #box .boxcol .circlechess {
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -129,255 +169,255 @@
       font-size: 1.8rem;
     }
 
-    #box .justifycontent-around{
-      justify-content:space-around;
+    #box .justifycontent-around {
+      justify-content: space-around;
     }
-    #box .justifycontent-between{
-      justify-content:space-between;
+
+    #box .justifycontent-between {
+      justify-content: space-between;
     }
 
     /* 紅棋子 */
-    #box .red{
+    #box .red {
       color: rgb(216, 2, 2);
     }
-
   </style>
 </head>
 
 <body>
- <!-- <div id="bigbox"> -->
-    <h1> 棋盤裡，車無論，馬無韁，叫聲將軍提防提防 </h1>
+  <!-- <div id="bigbox"> -->
+  <h1> 棋盤裡，車無論，馬無韁，叫聲將軍提防提防 </h1>
 
-    <div id="chess">
-      <div id="chessbox">
-        <div class="row">
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-        </div>
-
-        <div class="row">
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-        </div>
-
-        <div class="row">
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-        </div>
-
-        <div class="row">
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-        </div>
-
-        <!-- 第5行 -->
-        <div class="row">
-          <div class="col river"></div>
-          <div class="col river"> 楚 </div>
-          <div class="col river textalign-left"> 河 </div>
-          <div class="col river"></div>
-          <div class="col river"></div>
-          <div class="col river"> 漢 </div>
-          <div class="col river textalign-left"> 界 </div>
-          <div class="col river"></div>
-        </div>
-
-        <div class="row">
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-        </div>
-
-        <div class="row">
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-        </div>
-
-        <div class="row">
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-        </div>
-
-        <div class="row">
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-        </div>
+  <div id="chess">
+    <div id="chessbox">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
       </div>
 
-      <div id="box"> 
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
 
-        
-        <!-- 黑棋子 -->
-        <div class="boxrow">
-          <div class="boxcol">
-            <div class="circlechess"> 車 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 馬 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 象 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 士 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 將 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 士 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 象 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 馬 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 車 </div>
-          </div>
-        </div>
-        <div class="boxrow"></div>
-        <div class="boxrow justifycontent-around">
-          <div class="boxcol">
-            <div class="circlechess"> 包 </div>
-          </div>
-          <div class="boxcol"></div>
-          <div class="boxcol ">
-            <div class="circlechess"> 包 </div>
-          </div>
-        </div>
-        <div class="boxrow justifycontent-between">
-          <div class="boxcol">
-            <div class="circlechess"> 卒 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 卒 </div>
-          </div>
-          <div class="boxcol ">
-            <div class="circlechess"> 卒 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 卒 </div>
-          </div>
-          <div class="boxcol ">
-            <div class="circlechess"> 卒 </div>
-          </div>
-        </div>
-        <div class="boxrow"></div>
-        <div class="boxrow"></div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
 
-        <!-- 紅棋子 -->
-        <div class="boxrow justifycontent-between red">
-          <div class="boxcol">
-            <div class="circlechess"> 兵 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 兵 </div>
-          </div>
-          <div class="boxcol ">
-            <div class="circlechess"> 兵 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 兵 </div>
-          </div>
-          <div class="boxcol ">
-            <div class="circlechess"> 兵 </div>
-          </div>
-        </div>
-        <div class="boxrow justifycontent-around red">
-          <div class="boxcol">
-            <div class="circlechess"> 炮 </div>
-          </div>
-          <div class="boxcol"></div>
-          <div class="boxcol ">
-            <div class="circlechess"> 炮 </div>
-          </div>
-        </div>
-        <div class="boxrow"></div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
 
-        <div class="boxrow red">
-          <div class="boxcol">
-            <div class="circlechess"> 俥 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 傌 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 相 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 仕 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 帥 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 仕 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 相 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 傌 </div>
-          </div>
-          <div class="boxcol">
-            <div class="circlechess"> 俥 </div>
-          </div>
-        </div>
+      <!-- 第5行 -->
+      <div class="row">
+        <div class="col river"></div>
+        <div class="col river"> 楚 </div>
+        <div class="col river textalign-left"> 河 </div>
+        <div class="col river"></div>
+        <div class="col river"></div>
+        <div class="col river"> 漢 </div>
+        <div class="col river textalign-left"> 界 </div>
+        <div class="col river"></div>
+      </div>
 
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
       </div>
     </div>
 
-    <h1> 圖畫裡，龍不吟，虎不嘯，小小書僮可笑可笑 </h1>
-</div>
+    <div id="box">
+
+
+      <!-- 黑棋子 -->
+      <div class="boxrow">
+        <div class="boxcol">
+          <div class="circlechess"> 車 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 馬 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 象 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 士 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 將 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 士 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 象 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 馬 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 車 </div>
+        </div>
+      </div>
+      <div class="boxrow"></div>
+      <div class="boxrow justifycontent-around">
+        <div class="boxcol">
+          <div class="circlechess"> 包 </div>
+        </div>
+        <div class="boxcol"></div>
+        <div class="boxcol ">
+          <div class="circlechess"> 包 </div>
+        </div>
+      </div>
+      <div class="boxrow justifycontent-between">
+        <div class="boxcol">
+          <div class="circlechess"> 卒 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 卒 </div>
+        </div>
+        <div class="boxcol ">
+          <div class="circlechess"> 卒 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 卒 </div>
+        </div>
+        <div class="boxcol ">
+          <div class="circlechess"> 卒 </div>
+        </div>
+      </div>
+      <div class="boxrow"></div>
+      <div class="boxrow"></div>
+
+      <!-- 紅棋子 -->
+      <div class="boxrow justifycontent-between red">
+        <div class="boxcol">
+          <div class="circlechess"> 兵 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 兵 </div>
+        </div>
+        <div class="boxcol ">
+          <div class="circlechess"> 兵 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 兵 </div>
+        </div>
+        <div class="boxcol ">
+          <div class="circlechess"> 兵 </div>
+        </div>
+      </div>
+      <div class="boxrow justifycontent-around red">
+        <div class="boxcol">
+          <div class="circlechess"> 炮 </div>
+        </div>
+        <div class="boxcol"></div>
+        <div class="boxcol ">
+          <div class="circlechess"> 炮 </div>
+        </div>
+      </div>
+      <div class="boxrow"></div>
+
+      <div class="boxrow red">
+        <div class="boxcol">
+          <div class="circlechess"> 俥 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 傌 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 相 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 仕 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 帥 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 仕 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 相 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 傌 </div>
+        </div>
+        <div class="boxcol">
+          <div class="circlechess"> 俥 </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <h1> 圖畫裡，龍不吟，虎不嘯，小小書僮可笑可笑 </h1>
+  </div>
 
 </body>
 
