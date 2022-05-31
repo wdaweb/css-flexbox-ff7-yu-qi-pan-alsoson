@@ -75,42 +75,45 @@
       border-right: 1px solid black;
     }
 
-    #chessbox .row:nth-child(1) .col:nth-child(5)::before {
+    #chessbox .row:nth-child(1) .col:nth-child(6)::before {
       content: "";
       background-color: rgb(0, 0, 0);
       width: 0.9px;
-      height: 107px;
-      transform: skew(47deg);
+      height: 156px;
+      transform: rotate(47deg);
       position: absolute;
+      transform-origin: top;
     }
 
-    #chessbox .row:nth-child(1) .col:nth-child(5)::after {
+    #chessbox .row:nth-child(1) .col:nth-child(4)::after {
       content: "";
       background-color: black;
       width: 0.9px;
-      height: 107px;
-      transform: skew(-48deg);
+      height: 156px;
+      transform: rotate(-47deg);
       position: absolute;
+      transform-origin: top;
     }
 
-    #chessbox .row:nth-child(8) .col:nth-child(5)::before {
+    #chessbox .row:nth-child(8) .col:nth-child(6)::before {
       content: "";
       background-color: rgb(0, 0, 0);
       width: 0.9px;
-      height: 105px;
-      transform: skew(48deg);
+      height: 140px;
+      transform: rotate(48deg);
+      /* transform-origin: right; */
       position: absolute;
-      transform-origin: left;
+      transform-origin: top;
     }
 
-    #chessbox .row:nth-child(8) .col:nth-child(5)::after {
+    #chessbox .row:nth-child(8) .col:nth-child(4)::after {
       content: "";
       background-color: rgb(0, 0, 0);
       width: 0.9px;
-      height: 102px;
-      transform: skew(-48deg);
+      height: 140px;
+      transform: rotate(-50deg);
       position: absolute;
-      transform-origin: left;
+      transform-origin: top;
     }
 
 
